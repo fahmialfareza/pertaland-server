@@ -59,4 +59,4 @@ def spbu():
 
     return y
 
-app.run(port=7777)
+app.run(host='0.0.0.0', port=7777)
