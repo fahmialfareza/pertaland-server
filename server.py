@@ -11,7 +11,7 @@ def pertaland():
     data['minimarket'] = minimarket.minimarket(random.randint(0, 3), random.randint(0, 3), random.randint(5464, 19826), random.randint(3092, 21098), random.randint(0, 3))
     data['spbu'] = spbu.spbu(random.randint(954, 19865), random.randint(0, 2), random.randint(0, 5), random.randint(57, 998))
 
-    time.sleep(1)
+    time.sleep(2)
 
     return data
 
