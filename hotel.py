@@ -22,7 +22,7 @@ import sys
 import json
 import random
 
-def hotel(st=random.randint(0, 5), oh=random.randint(0, 5), vi=random.randint(100, 28000), to=random.randint(0, 10)):
+def hotel(st=random.randint(0, 5), oh=random.randint(0, 5), vi=random.randint(113, 27879), to=random.randint(0, 7)):
     cell_df = pd.read_csv("hotel.csv")
     cell_df = cell_df.drop(['No'], axis=1)
 

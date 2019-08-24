@@ -22,7 +22,7 @@ import sys
 import json
 import random
 
-def minimarket(ho=random.randint(0, 5), of=random.randint(0, 5), rd=random.randint(5000, 20000), po=random.randint(3000, 21000), om=random.randint(0, 5)):
+def minimarket(ho=random.randint(0, 3), of=random.randint(0, 3), rd=random.randint(5464, 19826), po=random.randint(3092, 21098), om=random.randint(0, 3)):
     cell_df = pd.read_csv("minimarket.csv")
     cell_df = cell_df.drop(['No'], axis=1)
 
