@@ -14,13 +14,9 @@ import numpy as np
 import scipy.optimize as opt
 from sklearn import preprocessing
 from sklearn.model_selection import train_test_split
-# %matplotlib inline
-import matplotlib.pyplot as plt
 from sklearn import svm
 from sklearn.metrics import f1_score
-import sys
-import json
-import random
+import sys, json
 
 def spbu(rd, gs, id, ho):
     cell_df = pd.read_csv("spbu.csv")
@@ -52,8 +48,6 @@ def spbu(rd, gs, id, ho):
     yhat = clf.predict(X_test)
 
     yhat = yhat[0]
-
-    print(rd, gs, id, ho)
 
     if yhat == 1:
         return True
