@@ -22,7 +22,7 @@ import sys
 import json
 import random
 
-def minimarket(ho=random.randint(0, 3), of=random.randint(0, 3), rd=random.randint(5464, 19826), po=random.randint(3092, 21098), om=random.randint(0, 3)):
+def minimarket(ho, of, rd, po, om):
     cell_df = pd.read_csv("minimarket.csv")
     cell_df = cell_df.drop(['No'], axis=1)
 
@@ -52,6 +52,8 @@ def minimarket(ho=random.randint(0, 3), of=random.randint(0, 3), rd=random.randi
     yhat = clf.predict(X_test)
 
     yhat = yhat[0]
+
+    print(ho, of, rd, po, om)
 
     if yhat == 1:
         return True

@@ -22,7 +22,7 @@ import sys
 import json
 import random
 
-def spbu(rd=random.randint(954, 19865), gs=random.randint(0, 2), id=random.randint(0, 5), ho=random.randint(57, 998)):
+def spbu(rd, gs, id, ho):
     cell_df = pd.read_csv("spbu.csv")
     cell_df = cell_df.drop(['No'], axis=1)
 
@@ -52,6 +52,8 @@ def spbu(rd=random.randint(954, 19865), gs=random.randint(0, 2), id=random.randi
     yhat = clf.predict(X_test)
 
     yhat = yhat[0]
+
+    print(rd, gs, id, ho)
 
     if yhat == 1:
         return True

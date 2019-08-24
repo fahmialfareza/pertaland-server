@@ -22,7 +22,7 @@ import sys
 import json
 import random
 
-def hotel(st=random.randint(0, 5), oh=random.randint(0, 5), vi=random.randint(113, 27879), to=random.randint(0, 7)):
+def hotel(st, oh, vi, to):
     cell_df = pd.read_csv("hotel.csv")
     cell_df = cell_df.drop(['No'], axis=1)
 
@@ -52,6 +52,8 @@ def hotel(st=random.randint(0, 5), oh=random.randint(0, 5), vi=random.randint(11
     yhat = clf.predict(X_test)
 
     yhat = yhat[0]
+
+    print(st, oh, vi, to)
 
     if yhat == 1:
         return True
